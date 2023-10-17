@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aaron Guitar</title>
+  </head>
+  <style>
+
+    @font-face {
+  font-family: "Nova";
+  src: url(./assets/fonts/OPTICenturyNova.otf);
+}
+@font-face {
+  font-family: "Nova Italic";
+  src: url(./assets/fonts/OPTICenturyNova-Italic.otf);
+}
+@font-face {
+  font-family: "Gothic Medium";
+  src: url(./assets/fonts/OPTIFranklinGothic-Medium.otf);
+}
+    
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+    .container h1 {
+      font-family: nova;
+    }
+    .container p {
+      font-family: Gothic Medium;
+    }
+
+    .container img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      position: relative;
+      left: 33px;
+      top: 21px;
+      z-index: 2;
+    }
+
+    .one {
+      -webkit-mask-image: url("./assets/images/white\ mask.png");
+      mask-image: url("./assets/images/white\ mask.png");
+    }
+
+    .two {
+      -webkit-mask-image: url("./assets/images/white\ mask.png");
+      mask-image: url("./assets/images/white\ mask.png");
+    }
+    .card-txt {
+      width: 500px;
+      height: 175px;
+      flex-shrink: 0;
+      border-radius: 25.3px;
+      color: black;
+      padding: 0rem 3rem;
+    }
+
+    img.outline {
+      position: relative;
+      left: 199px;
+      top: 19px;
+      z-index: 3;
+      width: 169px;
+    }
+    
+    .card-txt:hover {
+            background: #282828;
+              color: white;
+                    box-shadow: 0px 10.12px 10.12px 0px rgba(0, 0, 0, 0.15);
+
+
+    }
+
+ 
+
+
+  
+  </style>
+  <body>
+    <div class="container">
+      <img class="outline" src="./assets/images/White outline.png" alt="" />
+      <img class="one" src="./assets/images/timmy.png" alt="Balloons" />
+      <div class="card-txt">
+        <h1>“Daily G” Mag says</h1>
+        <p>
+          The clarity and organization of delivery is unmatched. Truly an
+          extraordinary course for all levels.
+        </p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

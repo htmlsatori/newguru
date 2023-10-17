@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Item Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  </head>
+  <style>
+    :root {
+      --white-100: #fff;
+      --white-200: #e4e6e7;
+      --white-300: #c9cccf;
+      --white-400: #a1a6aa;
+      --black-100: #141a1f;
+      --black-200: #101418;
+      --black-300: #0a0d0f;
+      --black-400: #060809;
+    }
+    *,
+    *::before,
+    *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+      list-style-type: none;
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    html {
+      font-size: 100%;
+      box-sizing: inherit;
+      scroll-behavior: smooth;
+      height: -webkit-fill-available;
+    }
+    body {
+      font-family: "Rubik", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--black-300);
+      background-color: var(--white-100);
+    }
+    main {
+      overflow: hidden;
+    }
+    a,
+    button {
+      cursor: pointer;
+      user-select: none;
+      border: none;
+      outline: none;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      border-radius: 60px;
+    }
+    .section {
+      margin-inline: auto;
+      padding-block: 5rem;
+    }
+    .container {
+      max-width: 100rem;
+      height: auto;
+      margin-inline: auto;
+      padding-inline: 1.25rem;
+     
+    }
+    .splide__arrow {
+      top: 115%;
+      background-color: white;
+    }
+
+    .splide__pagination  {
+      display: none;
+
+    }
+
+
+    
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 144px 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      height: 450px;
+      justify-items: stretch;
+     background: rgb(220,214,255);
+background: -moz-radial-gradient(circle, rgba(220,214,255,1) 0%, rgba(220,220,160,1) 58%, rgba(205,246,202,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(220,214,255,1) 0%, rgba(220,220,160,1) 58%, rgba(205,246,202,1) 100%);
+background: radial-gradient(circle, rgba(220,214,255,1) 0%, rgba(220,220,160,1) 58%, rgba(205,246,202,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dcd6ff",endColorstr="#cdf6ca",GradientType=1);
+      border-radius: 60px;
+      padding: 2rem;
+    
+    }
+
+    .one {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .two {
+      grid-area: 1 / 2 / 2 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .three {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+    .four {
+      grid-area: 3 / 1 / 4 / 3;
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 60px;
+      padding: 50px 0px;
+      height: 100px;
+    }
+    h5 {
+      font-size: 1rem;
+      font-weight: 100;
+      font-family: medium;
+    }
+    h3 {
+      font-size: 2.5rem;
+      line-height: 40px;
+      margin: 0;
+    }
+  </style>
+  <body>
+    <section class="section slider__section">
+      <div class="container slider__wrapper">
+        <div class="slider__column splide">
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="splide__slide">
+                <div class="content">
+                  <div class="one">
+                    <h3>
+                      The Title of <br />
+                      the Very <br />
+                      First Course
+                    </h3>
+                  </div>
+                  <div class="two">
+                    <div class="price"><h5 class="dollas">$45</h5></div>
+                    <div class="btn">Own this course &#8594;</div>
+                  </div>
+                  <div class="three">
+                    <h5>
+                      According to all known laws of aviation, there is no way a
+                      bee should be able to fly. Its wings are too small to get
+                      its fat little body off the ground. The bee, flies. READ
+                      MORE
+                    </h5>
+                  </div>
+
+                  <div class="four"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="splide__slide">
+                  <div class="content">
+                    <div class="one">
+                      <h3>
+                        The Title of <br />
+                        the Very <br />
+                        First Course
+                      </h3>
+                    </div>
+                    <div class="two">
+                      <div class="price"><h5 class="dollas">$45</h5></div>
+                      <div class="btn">Own this course &#8594;</div>
+                    </div>
+                    <div class="three">
+                      <h5>
+                        According to all known laws of aviation, there is no way
+                        a bee should be able to fly. Its wings are too small to
+                        get its fat little body off the ground. The bee, flies.
+                        READ MORE
+                      </h5>
+                    </div>
+
+                    <div class="four"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="splide__slide">
+                  <div class="content">
+                    <div class="one">
+                      <h3>
+                        The Title of <br />
+                        the Very <br />
+                        First Course
+                      </h3>
+                    </div>
+                    <div class="two">
+                      <div class="price"><h5 class="dollas">$45</h5></div>
+                      <div class="btn">Own this course &#8594;</div>
+                    </div>
+                    <div class="three">
+                      <h5>
+                        According to all known laws of aviation, there is no way
+                        a bee should be able to fly. Its wings are too small to
+                        get its fat little body off the ground. The bee, flies.
+                        READ MORE
+                      </h5>
+                    </div>
+
+                    <div class="four"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const splide = new Splide(".splide", {
+        // Optional parameters
+        start: 1.5,
+        perPage: 1.5,
+        perMove: 1,
+        gap: 20,
+        drag: "free",
+        snap: false,
+        interval: 3000,
+        arrows: true,
+        pagination: false,
+        rewind: true,
+        rewindByDrag: true,
+        lazyLoad: true,
+        focus: 0,
+        
+
+        // Responsive breakpoint
+        breakpoints: {
+          768: {
+            perPage: 1.5,
+            snap: false,
+            
+          },
+        },
+      });
+
+      splide.mount();
+
+      new Splide(".splide", {
+        arrowPath: "M32.1693 41L40 21.1399L32.1693 1",
+      }).mount();
+    </script>
+  </body>
+</html>

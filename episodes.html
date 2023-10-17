@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    .episode-item {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .episode-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 26px;
+    }
+
+    .episode-item p {
+      padding: 10px 0px;
+    }
+
+    .episode-item h4 {
+      font-size: 20px;
+    }
+
+    .nav-wrap {
+      height: 300px;
+      background-image: url(./assets/images/background.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      align-content: flex-start;
+      flex-direction: column;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="page-wrap">
+      <!--nav bar-->
+      <div class="menu-container">
+        <div class="nav">
+          <div class="title">
+            <img class="brand" src="./assets/images/logo.png" alt="" />
+            <h1>
+              Aaron <br />
+              Guitar
+            </h1>
+          </div>
+          <div class="nav-links">
+            <a href="#">Selection 1</a>
+            <a href="#">Selection 2</a>
+            <a href="#">Selection 3</a>
+          </div>
+          <div onclick="openNav()" class="hamburger">
+            <img src="/assets/images/hamburger.png" alt="" />
+          </div>
+        </div>
+        <div class="login-btn"><button>Log In</button></div>
+      </div>
+      <div id="full-screen-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="#">Selection 1</a>
+          <a href="#">Selection 2</a>
+          <a href="#">Selection 3</a>
+        </div>
+      </div>
+      <!--nav bar end -->
+
+      <!--container start-->
+
+      <div class="nav-wrap">
+        <button>return</button>
+        <h2>The secret to every pop chord ever</h2>
+        <p>
+          According to all known laws of aviation, there is no way a bee should
+          be able to fly. It flies anyway because READ MORE
+        </p>
+        <button>Play all</button>
+      </div>
+
+      <!--container end-->
+
+      <!--episode start-->
+      <div class="episode-item">
+        <div class="epsisode-video">
+          <img src="./assets/images/Img.png" alt="" />
+        </div>
+        <div class="episode-txt">
+          <p>5:21</p>
+          <h4>Episode 1: Stringing it all together</h4>
+          <p>
+            According to all known laws of aviation, there is no way a bee
+            should be able to fly. Its wings are too small to get its fat little
+            body off the ground. The bee, of course, flies anyway because bees
+            don't care what humans think is impossible. BARRY BENSON (Barry is
+            picking out a shirt) Yellow, black. Yellow, black. Yellow, black.
+            Yellow, black. Ooh, black and yellow! Let's shake it up a little.
+          </p>
+        </div>
+      </div>
+
+      <!--epsisode end-->
+
+      <!--footer start-->
+
+      <div class="footer">
+        <div class="foot-wrap">
+          <div class="f-links">
+            <ul>
+              <li>Terms of Service</li>
+              <li>Privacy Policy</li>
+              <li>Contact Us</li>
+              <li>Credits</li>
+            </ul>
+          </div>
+          <div class="logo">
+            <img src="./assets/images/Electric Air Logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!--footer end-->
+
+      <div class="slider"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
